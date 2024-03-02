@@ -1,5 +1,10 @@
 window.onload = function () {
-  
+  // 로그인 name이 없을 시 href
+    // let user_name ="";
+    // if(user_name === null || user_name === "") {
+    //   location.href="login.html";
+    // }
+    
     let movie1 = localStorage.getItem('movie1');
     let movie2 = localStorage.getItem('movie2');
 
@@ -13,15 +18,25 @@ window.onload = function () {
     original.innerText = `${movie1.original_title}`;
     const overview = document.querySelector('.overview');
     overview.innerText = `${movie1.overview}`;
+
     const pop = document.querySelector('.pop');
-    const popularityInt = movie1.popularity.toString().split('.')[0]; // 소수점 앞 부분만 추출
-    pop.innerText = `⭐ : ${popularityInt} / 1000`;
+    let score = Math.floor(movie1.popularity / 100);
+    if (score > 10) {
+        score = 10;
+    } else {
+        score = (movie1.popularity / 100).toFixed(1);
+    }
     
+    pop.innerText = `⭐ : ${score}`;
+
     const release = document.querySelector('.release');
     release.innerText = `${movie1.release_date}`;
 
     const img = document.querySelector('img');
     img.src = movie1.image;
+
+    const video = document.querySelector('.video-frame')
+    video.src = `https://www.youtube.com/embed/${movie1.youtube}`;
 
 
     localStorage.clear();
@@ -35,16 +50,29 @@ window.onload = function () {
     original.innerText = `${movie1.original_title}`;
     const overview = document.querySelector('.overview');
     overview.innerText = `${movie1.overview}`;
+
     const pop = document.querySelector('.pop');
-    const popularityInt = movie1.popularity.toString().split('.')[0]; // 소수점 앞 부분만 추출
-    pop.innerText = `⭐ : ${popularityInt} / 1000`;
+    let score = Math.floor(movie1.popularity / 100);
     
+    if (score > 10) {
+        score = 10;
+    } else {
+        score = (movie1.popularity / 100).toFixed(1);
+    }
+    
+    pop.innerText = `⭐ : ${score}`;
+
     const release = document.querySelector('.release');
     release.innerText = `${movie1.release_date}`;
 
-    const img = document.querySelector('img');
+    // const img = document.querySelector('img');
+    // img.src = movie1.image;
+    const img = document.querySelector('.carousel-item.active img');
     img.src = movie1.image;
 
+
+    const video = document.querySelector('.video-frame')
+    video.src = `https://www.youtube.com/embed/${movie1.youtube}`;
 
     localStorage.clear();
   }

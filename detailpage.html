@@ -10,39 +10,46 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
-        <div class="container">
-          <a class="navbar-brand d-md-none" href="#">
-            <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
-            Aperture
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasLabel">Aperture</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav flex-grow-1 justify-content-between">
-                <li class="nav-item"><a class="nav-link" href="#">
-                  <svg class="bi" width="24" height="24"><use xlink:href="#aperture"/></svg>
-                </a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Tour</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Enterprise</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">
-                  <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>
-                </a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
+    
+  <header class = "navbar-container container">    
+    <div class = "topNavbar"  id = "navbar" >
+
+        <h2 class = "LogoStyle" href = "index.html"><img class="Logo" src="img/cinema21.png" alt=""></h2>
+        <div class = "topNav-container">
+                <ul class="topNav">
+                   
+                    <li class="log-in-icon"><a href="Login.html">
+                        <span id="userWelcomeMessage" class="user-welcome"></span>
+                        <span class="logingone">
+                        <img 
+                        src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" 
+                        alt="로그인" class="login-img">
+                        <span> Log in </span>
+                        </span>
+                    </a>
+                </li>
+                <li><a href = "SignUp.html">
+                    <span class="signupgone"></span>
+                    <img 
+                    src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" 
+                    alt="회원가입">
+                    <span>Sign up</span>
+                     </a>
+                </li>
+                <li><a href = "MyPage.html">
+                        <img 
+                        src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" 
+                        alt="MY Page">
+                        <span>My Page</span>
+                    </a>
+                </li>
+           
+                </ul>
+         </div>
+    </div>
+</header>
+
+
     <section class="background-image">
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -50,7 +57,7 @@
             </div>
             <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="" alt="" class="d-block w-100 custom-height">
+                <img src="" alt="" class="carousel-image d-block w-100 custom-height">
             </div>
 
             <div class="in-image-text">
@@ -186,7 +193,8 @@
     <span class="close">&times;</span>
     <div class="row">
       <div class="video-iframe">
-        <iframe class="video-frame video-container" src="https://www.youtube.com/embed/Ninhkg7Jh48?autoplay=1"></iframe>
+        <iframe class="video-frame video-container" src="" autoplay></iframe>
+        
       </div>
     </div>
   </div>
